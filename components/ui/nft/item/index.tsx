@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { FunctionComponent } from "react";
 import { NftMeta, Nft } from "../../../../types/nft";
-import Image from "next/image"; // Import the next/image component
 
 type NftItemProps = {
   item: Nft;
@@ -12,7 +11,7 @@ const NftItem: FunctionComponent<NftItemProps> = ({ item }) => {
     <>
       <div className="flex-shrink-0">
         {/* Use the next/image component for better image optimization */}
-        <Image
+        <img
           className="h-72 w-full object-cover"
           src={item.meta.image}
           alt="New NFT"
